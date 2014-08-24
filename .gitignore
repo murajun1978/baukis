@@ -17,3 +17,6 @@
 
 # Ignore gemset file
 .rbenv-gemsets
+
+# Ignore tags
+tags
