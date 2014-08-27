@@ -23,12 +23,12 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.before :each do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.start
+    DatabaseRewinder.strategy = :transaction
+    DatabaseRewinder.start
   end
 
   config.after :each do
-    DatabaseCleaner.clean
+    DatabaseRewinder.clean
   end
 
   config.before :suite do
